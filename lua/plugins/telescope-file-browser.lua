@@ -1,6 +1,6 @@
 local fb_actions = require "telescope._extensions.file_browser.actions"
 
-require("telescope").setup {
+require("lua.plugins.telescope-file-browser").setup {
   extensions = {
     file_browser = {
       path = vim.loop.cwd(),
