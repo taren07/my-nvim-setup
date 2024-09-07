@@ -25,3 +25,7 @@ vim.opt.wrap = false -- no wrap lines
 vim.opt.backspace = 'start, eol, indent'
 vim.opt.path:append { '**' } 
 vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.splitbelow = true -- Put new windows below current
+vim.opt.splitright = true -- Put new windows right of current
+vim.opt.splitkeep = "cursor"
+vim.opt.mouse = ""
