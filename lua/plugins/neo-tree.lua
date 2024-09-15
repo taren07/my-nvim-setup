@@ -1,4 +1,4 @@
-use {
+require('neo-tree').setup({
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     requires = { 
@@ -312,4 +312,4 @@ use {
 
       vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
     end
-}
+})

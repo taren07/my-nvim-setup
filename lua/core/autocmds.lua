@@ -22,7 +22,7 @@ vim.opt.tabstop = 2
 vim.opt.ai = true -- autoindent
 vim.opt.si = true -- smartindent
 vim.opt.wrap = false -- no wrap lines
-vim.opt.backspace = 'start, eol, indent'
+vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' } 
 vim.opt.wildignore:append { '*/node_modules/*' }
 

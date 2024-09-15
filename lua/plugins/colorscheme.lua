@@ -1,5 +1,6 @@
 -- Default options
 require('nightfox').setup({
+  print('nightfox setup'),
   options = {
     -- Compiled file's destination location
     compile_path = vim.fn.stdpath("cache") .. "/nightfox",
