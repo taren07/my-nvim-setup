@@ -37,10 +37,8 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
-
 -- neo-tree
-keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', opts)
-keymap.set('n', '<C-b>', '<cmd>NvimTreeFocus<CR>', opts)
+keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
 
 -- telescope-file-browser
 keymap.set("n", "<space>fb", ":Telescope file_browser<CR>", opts)
