@@ -36,6 +36,19 @@ return require('packer').startup(function(use)
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
+  use { 'onsails/lspkind-nvim',
+    config = function()
+        require('plugins.lspkind')
+      end
+  }
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+  use { 'neovim/nvim-lspconfig',
+    config = function()
+        require('plugins.lspconfig')
+      end
+  }
 
   -- if PACKER_BOOTSTRAP then
   --   require("packer").sync()
