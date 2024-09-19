@@ -1,3 +1,8 @@
+local status, nvim_lsp = require('lspconfig')
+if not status then
+    return
+end
+
 local protocol = require('vim.lsp.protocol')
 local on_attach = function(client, bufnr)
 if client.server_capabilities.documentFormattingProvider then
