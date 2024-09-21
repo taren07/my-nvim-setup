@@ -5,13 +5,13 @@ return require('packer').startup(function(use)
   use 'vim-jp/vimdoc-ja'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons'},
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       require('plugins.lualine')
     end
   }
   use {
-  "nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     requires = { 
       "nvim-lua/plenary.nvim",
@@ -21,7 +21,6 @@ return require('packer').startup(function(use)
     config = function()
       require('plugins.neo-tree')
     end
-
   }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
@@ -41,6 +40,7 @@ return require('packer').startup(function(use)
         require('plugins.lspkind')
       end
   }
+  use 'L3MON4D3/LuaSnip'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
   use { 'hrsh7th/nvim-cmp',
