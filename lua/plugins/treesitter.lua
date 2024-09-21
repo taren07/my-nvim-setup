@@ -37,8 +37,6 @@ ts.setup {
         "vue",
         "svelte",
         "tsx",
-        "javascriptreact",
-        "typescriptreact",
         "rust",
         "html",
         "css",
@@ -63,8 +61,6 @@ ts.setup {
         "vue",
         "svelte",
         "tsx",
-        "javascriptreact",
-        "typescriptreact",
     },
     autotag = {
         enable = true,
