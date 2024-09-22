@@ -1,30 +1,50 @@
-require('telescope').setup{
+local telescope = require('telescope')
+
+local actions = require('telescope.actions')
+
+function telescope_buffer_dir()
+  return vim.fn.expand('%:p:h')
+end
+
+local fb_actions = require 'telescope'.extensions.file_browser.actions
+
+telescope.setup({
   defaults = {
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
     mappings = {
-      i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
-      }
-    }
-  },
-  pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+      n = {
+        ['q'] = actions.close,
+      },
+    },
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
+    file_browser = {
+      theme = 'dropdown',
+      hijack_netrw = true,
+      mappings = {
+        ['i'] = {
+          ['<C-w>'] = function() vim.cmd('normal vbd') end,
+        },
+        ['n'] = {
+          ['N'] = fb_actions.create,
+          ['h'] = fb_actions.goto_parent_dir,
+          ['/'] = function()
+            vim.cmd('startinsert')
+          end
+        },
+      }
+    },
+  },
+})
+
+telescope.load_extension('file_browser')
+local opts = {
+  noremap = true,
+  silent = true
 }
+
+vim.keymap.set('n', ';f', '<cmd>lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<cr>', opts)
+vim.keymap.set('n', ';r', '<cmd>lua require("telescope.builtin").livi_grep()<cr>', opts)
+vim.keymap.set('n', '\\\\', '<cmd>lua require("telescope.builtin").buffers()<cr>', opts)
+vim.keymap.set('n', ';t', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
+vim.keymap.set('n', ';e', '<cmd>lua require("telescope.builtin").diagnostics()<cr>', opts)
+vim.keymap.set('n', 'sf', '<cmd>lua require("telescope.builtin").file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }) })<cr>', opts)
