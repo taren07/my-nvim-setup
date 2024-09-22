@@ -32,10 +32,7 @@ return require('packer').startup(function(use)
         require('plugins.telescope')
       end
   }
-  use {
-    "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-  }
+  use "nvim-telescope/telescope-file-browser.nvim"
   use { 'onsails/lspkind-nvim',
     config = function()
         require('plugins.lspkind')
