@@ -15,7 +15,7 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- New tab
+-- Tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 keymap.set('n', 'tn', ':tabnew<Return>', { silent = true })
 keymap.set('n', 'tc', ':tabclose<Return>', { silent = true })

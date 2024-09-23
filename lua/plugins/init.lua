@@ -18,12 +18,14 @@ return require('packer').startup(function(use)
   }
 
   use 'vim-jp/vimdoc-ja'
+
   use {
     'nvim-lualine/lualine.nvim',
     config = function()
       require('plugins.lualine')
     end
   }
+
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -45,6 +47,7 @@ return require('packer').startup(function(use)
         require('plugins.telescope')
       end
   }
+
   use "nvim-telescope/telescope-file-browser.nvim"
   use { 'onsails/lspkind-nvim',
     config = function()
@@ -60,6 +63,7 @@ return require('packer').startup(function(use)
         require('plugins.cmp')
       end
   }
+
   use {
     'windwp/nvim-autopairs',
     config = function()
@@ -72,6 +76,7 @@ return require('packer').startup(function(use)
         require('plugins.ts-autotag')
       end
   }
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
@@ -79,6 +84,7 @@ return require('packer').startup(function(use)
         require('plugins.treesitter')
       end
   }
+
   use { 'neovim/nvim-lspconfig',
     config = function()
         require('plugins.lspconfig')
@@ -89,6 +95,13 @@ return require('packer').startup(function(use)
     'akinsho/nvim-bufferline.lua',
     config = function()
         require('plugins.bufferline')
+      end
+  }
+
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+        require('plugins.colorizer')
       end
   }
 end)
