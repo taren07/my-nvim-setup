@@ -3,10 +3,17 @@ vim.cmd.packadd "packer.nvim"
 return require('packer').startup(function(use) 
   use "EdenEast/nightfox.nvim"
   use 'wbthomason/packer.nvim'
+
+  use {
+    'kyazdani42/nvim-web-devicons',
+    config = function()
+        require('plugins.web-devicons')
+      end
+  }
+
   use 'vim-jp/vimdoc-ja'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       require('plugins.lualine')
     end
