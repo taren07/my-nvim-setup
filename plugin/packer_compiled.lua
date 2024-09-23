@@ -107,11 +107,6 @@ _G.packer_plugins = {
     path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
-  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -122,6 +117,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-bufferline.lua"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23plugins.bufferline\frequire\0" },
+    loaded = true,
+    path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
+    url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
     config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16plugins.cmp\frequire\0" },
@@ -153,6 +154,12 @@ _G.packer_plugins = {
     path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    config = { "\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24plugins.colorscheme\frequire\0" },
+    loaded = true,
+    path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/t.e/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -182,30 +189,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-ts-autotag
-time([[Config for nvim-ts-autotag]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23plugins.ts-autotag\frequire\0", "config", "nvim-ts-autotag")
-time([[Config for nvim-ts-autotag]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: lspkind-nvim
-time([[Config for lspkind-nvim]], true)
-try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.lspkind\frequire\0", "config", "lspkind-nvim")
-time([[Config for lspkind-nvim]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\25plugins.web-devicons\frequire\0", "config", "nvim-web-devicons")
-time([[Config for nvim-web-devicons]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.lspconfig\frequire\0", "config", "nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16plugins.cmp\frequire\0", "config", "nvim-cmp")
@@ -218,10 +201,42 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
+-- Config for: nvim-bufferline.lua
+time([[Config for nvim-bufferline.lua]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23plugins.bufferline\frequire\0", "config", "nvim-bufferline.lua")
+time([[Config for nvim-bufferline.lua]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23plugins.ts-autotag\frequire\0", "config", "nvim-ts-autotag")
+time([[Config for nvim-ts-autotag]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24plugins.colorscheme\frequire\0", "config", "onedark.nvim")
+time([[Config for onedark.nvim]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\25plugins.web-devicons\frequire\0", "config", "nvim-web-devicons")
+time([[Config for nvim-web-devicons]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
 try_loadstring("\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21plugins.neo-tree\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.lspconfig\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: lspkind-nvim
+time([[Config for lspkind-nvim]], true)
+try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.lspkind\frequire\0", "config", "lspkind-nvim")
+time([[Config for lspkind-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -1,7 +1,13 @@
 vim.cmd.packadd "packer.nvim"
 
 return require('packer').startup(function(use) 
-  use "EdenEast/nightfox.nvim"
+  use {
+    'navarasu/onedark.nvim',
+    config = function()
+        require('plugins.colorscheme')
+      end
+  }
+
   use 'wbthomason/packer.nvim'
 
   use {
@@ -79,7 +85,10 @@ return require('packer').startup(function(use)
       end
   }
 
-  -- if PACKER_BOOTSTRAP then
-  --   require("packer").sync()
-  -- end
+  use {
+    'akinsho/nvim-bufferline.lua',
+    config = function()
+        require('plugins.bufferline')
+      end
+  }
 end)
