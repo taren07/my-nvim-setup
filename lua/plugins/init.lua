@@ -104,4 +104,16 @@ return require('packer').startup(function(use)
         require('plugins.colorizer')
       end
   }
+
+  use {
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter', -- optional
+        'nvim-tree/nvim-web-devicons',     -- optional
+    },
+    config = function()
+        require('plugins.lspsaga')
+      end
+  }
 end)
