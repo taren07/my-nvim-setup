@@ -116,4 +116,19 @@ return require('packer').startup(function(use)
         require('plugins.lspsaga')
       end
   }
+
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+        require('plugins.null-ls')
+      end
+  }
+  use {
+    'MunifTanjim/prettier.nvim',
+    config = function()
+        require('plugins.prettier')
+      end
+  }
+
+
 end)
