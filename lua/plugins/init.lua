@@ -137,5 +137,12 @@ return require('packer').startup(function(use)
       end
   }
 
+  use {
+    'dinhhuy258/git.nvim',
+    config = function()
+        require('plugins.git')
+      end
+  }
+
 
 end)
