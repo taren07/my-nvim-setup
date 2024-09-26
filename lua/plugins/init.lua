@@ -150,7 +150,12 @@ return require('packer').startup(function(use)
         require('plugins.mason')
       end
   }
-  use 'williamboman/mason-lspconfig.nvim'
+  use {
+    'williamboman/mason-lspconfig.nvim',
+    config = function()
+        require('plugins.mason-lspconfig')
+      end
+  }
 
 
 end)
