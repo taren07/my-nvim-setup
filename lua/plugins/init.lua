@@ -144,5 +144,13 @@ return require('packer').startup(function(use)
       end
   }
 
+  use {
+    'williamboman/mason.nvim',
+    config = function()
+        require('plugins.mason')
+      end
+  }
+  use 'williamboman/mason-lspconfig.nvim'
+
 
 end)
