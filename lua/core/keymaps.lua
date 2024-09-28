@@ -24,6 +24,7 @@ keymap.set('n', 'th', ':tabnext<Return>', { silent = true })
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 's<left>', '<C-w>h')
@@ -46,3 +47,7 @@ keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
 
 -- telescope-file-browser
 keymap.set("n", "<space>fb", ":Telescope file_browser<CR>", opts)
+
+-- BufferLine
+keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<cr>', {})
+keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>', {})
