@@ -9,7 +9,6 @@ lspconfig.setup {
         'vimls',        -- Vim
         'marksman',     -- Markdown
         'phpactor',     -- PHP
-        'solargraph',   -- Ruby
         'cssmodules_ls',-- SCSS
         'tailwindcss',  -- Tailwind CSS
         'hls',          -- Haskell
