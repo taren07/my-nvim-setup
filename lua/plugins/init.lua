@@ -80,9 +80,9 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function()
-        require('plugins.treesitter')
-      end
+    -- config = function()
+    --     require('plugins.treesitter')
+    --   end
   }
 
   use { 'neovim/nvim-lspconfig',
