@@ -109,8 +109,8 @@ return require('packer').startup(function(use)
     'nvimdev/lspsaga.nvim',
     after = 'nvim-lspconfig',
     dependencies = {
-        'nvim-treesitter/nvim-treesitter', -- optional
-        'nvim-tree/nvim-web-devicons',     -- optional
+        'nvim-treesitter/nvim-treesitter',
+        'nvim-tree/nvim-web-devicons',
     },
     config = function()
         require('plugins.lspsaga')
@@ -154,6 +154,20 @@ return require('packer').startup(function(use)
     'williamboman/mason-lspconfig.nvim',
     config = function()
         require('plugins.mason-lspconfig')
+      end
+  }
+
+  use {
+    'zbirenbaum/copilot.lua',
+    config = function()
+        require('plugins.copilot')
+      end
+  }
+  use {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    branch = 'canary',
+    config = function()
+        require('plugins.copilot-chat')
       end
   }
 
